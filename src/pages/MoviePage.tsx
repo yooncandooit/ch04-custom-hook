@@ -13,7 +13,7 @@ export default function MoviePage() {
   const [isPending, setIsPending] = useState(false);
   // 2. 에러
   const [isError, setIsError] = useState(false);
-  //3. 페이지네이션
+// 3. pagenation
   const [page, setPage] = useState(1); // 현재 = 1페이지 상태
 
   const {category} = useParams<{
@@ -23,7 +23,7 @@ export default function MoviePage() {
   useEffect((): void => {
     const fetchMovie = async (): Promise<void> => {
       setIsPending(true);
-
+ 
       try {
         const { data } = await axios.get(
           `https://api.themoviedb.org/3/movie/${category}?language=ko-KR&page=${page}`,
