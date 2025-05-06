@@ -11,7 +11,7 @@ import MovieDetailPage from "./pages/MovieDetailPage";
 const router = createBrowserRouter([
   {
     path: "/",
-    element: <HomePage />, // Routelayout?? 페이지 이동 안되는 이슈
+    element: <HomePage />, 
     errorElement: <NotFoundPage />,
     children: [
       {
